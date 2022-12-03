@@ -22,6 +22,13 @@ class APIClient:
         }
         return params
 
+    def _get(self, endpoint: str, payload: dict) -> dict:
+        """Post the payload to the keccel api endpoint."""
+        url = f"{self.base_url}{endpoint}"
+        response = requests.get(url, json=payload)
+        print(f"URL: {url} Response status: {response.status_code}")
+        return response.json()
+
     def _post(self, endpoint: str, payload: dict) -> dict:
         """Post the payload to the keccel api endpoint."""
         url = f"{self.base_url}{endpoint}"
@@ -74,7 +81,7 @@ class APIClient:
         """
         endpoint = "/balance.asp"
         payload = self._shared_params
-        return self._post(endpoint, payload)
+        return self._get(endpoint, payload)
         ...
 
     def get_delivery_report(self, message_id: str) -> dict:
@@ -94,5 +101,5 @@ class APIClient:
         endpoint = "/delivery.asp"
         payload = self._shared_params
         payload["messageid"] = message_id
-        return self._post(endpoint, payload)
+        return self._get(endpoint, payload)
         ...

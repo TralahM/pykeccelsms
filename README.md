@@ -4,6 +4,7 @@ DR Congo at a very affordable cost. Both requests and responses are transmitted 
 
 ## SENDING AN SMS
 Method: POST
+
 URL: https://api.keccel.com/sms/v2/message.asp
 
 | Request Parameter | Description                                                 | Example       |
@@ -58,6 +59,7 @@ http(s)://yourcallbackurl?messageID=123456&status=DELIVERED
 ### PULL: Delivery Check
 You can also send a request to our delivery endpoint to check on the delivery status of a previous sent message:
 Method: GET
+
 URL: https://api.keccel.com/sms/v2/delivery.asp
 
 | Request Parameter | Description                                                 | Example       |
@@ -74,6 +76,7 @@ URL: https://api.keccel.com/sms/v2/delivery.asp
 ## BALANCE CHECK
 This request is used to get the amount of the remaining SMS credits and the expiration date of a designated account.
 Method: GET
+
 URL: https://api.keccel.com/sms/v2/balance.asp
 
 | Request Parameter | Description                                                 | Example       |
