@@ -1,0 +1,9 @@
+build/*
+docs/_build/*
+*egg-info/*
+dist/*
+__pycache__/*
+*__pycache__/*
+test_flexpay.py
+*.json
+*__pycache__*

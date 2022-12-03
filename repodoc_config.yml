@@ -1,0 +1,15 @@
+author_email: briantralah@gmail.com
+author_name: Tralah M Brian
+author_username: TralahM
+console_scripts:
+  - ''
+install_requires:
+  - requests
+language: python
+licence: GPLv2
+package_name: pykeccelsms
+program_description: A Python SDK for the Keccel Messaging API for sms in the DRC.
+program_name: keccelsms
+readthedocs: true
+repo_name: pykeccelsms
+version: '0.1'
